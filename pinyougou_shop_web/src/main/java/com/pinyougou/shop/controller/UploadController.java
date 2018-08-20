@@ -16,6 +16,7 @@ public class UploadController {
     public Result uploadFile(MultipartFile file){
         //1.创建一个FastDFS的客户端
         try {
+            System.out.println("上传文件");
             FastDFSClient fastDFSClient = new FastDFSClient("classpath:config/fastdfs_client.conf");
         //2.字节数组
             byte[] bytes = file.getBytes();
